@@ -1,0 +1,986 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    --webkit-font-smoothing:antialised;
+    background:#232b38 ;
+}
+
+
+/* Utility css - open  */
+
+.flex{
+    display: flex;
+}
+.justify-between{
+    justify-content: space-between;
+}
+.items-center{
+    align-items: center;
+}
+.justify-center{
+    justify-content: center;
+}
+
+
+:root{
+    /* --primary:#eebf00; */
+    /* --primary:#2ECC71; */
+    --primary: #196F3D;
+    --secondary:#232b38;
+    --ternary:#6c6c6c;
+    --danger:#fe4545;
+    --pure:#fefefe;
+    --light:#f0f0f0;
+    --heaven:#ffffff;
+    --footer:#2d333f;
+}
+a{
+    text-decoration: none;
+    color: var(--secondary);
+}
+
+/* Utility css - close  */
+
+/* container */
+
+.container{
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+/* media query for container  */
+
+@media (min-width:576px){
+    .container{
+        max-width: 540px;
+    }}
+@media (min-width:768px){
+    .container{
+        max-width: 720px;
+    }}
+@media (min-width:992px){
+    .container{
+        max-width: 960px;
+    }}
+@media (min-width:1200px){
+    .container{
+        max-width: 1152px;
+    }}
+
+/* media query for container  */
+
+/* -------------- Responsive : After -------------  */
+
+.main-wrapper{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.nav-background{
+    width: 100%;
+    height: 100%;
+    background: var(--light);
+    position: absolute;
+    top: 0%;
+    left: 0;
+    padding: 0;
+    z-index: 1;
+}
+.nav-trigger{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    padding: 15px;
+    display: none;
+}
+.nav-trigger .ham-svg{
+    width: 40px;
+    height: 40px;
+}
+.site-content-wrapper{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: var(--heaven);
+    z-index: 2;
+    transition: all .3s ease;
+}
+.site-content-wrapper.scaled{
+    transform: scale(0.9) translateX(90%);
+    border-radius: 3px;
+    box-shadow: 0 3px 10px var(--secondary);
+}
+.site-content{
+    width: 100%;
+    height: 100%;
+    overflow-x: auto;
+}
+
+
+/* -------------- Responsive : After -------------  */
+
+header.topbar{
+    background:var(--secondary);
+    color: var(--pure);
+    padding: 0.75rem 0;
+}
+
+/* nav      */
+/* .navbar-bg{
+    background: var(--secondary) !important;
+} */
+.navbar{
+    margin-bottom: 1rem;
+}
+nav .top{
+    padding: .5rem 0;
+}
+nav .top .contact h5,nav .top .time h5{
+    margin-bottom: 0.25rem;
+}
+nav .top .contact h6, nav .top .time h6{
+    font-family: "poppins",sans-serif;
+    font-weight: 450;
+    letter-spacing: 0.05rem;
+    font-size: 0.75rem;
+    color: var(--ternary);
+}
+
+nav .top .contact .space-nav, nav .top .time .space-nav{
+    margin-right: 1rem;
+}
+
+/* navbar  */
+
+nav .navbar a{
+    text-decoration: none;
+    color: var(--secondary);
+    font-family: "poppins",sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin: 0 .5rem;
+    padding: .1rem 1rem;
+    transition: all .3s ease;
+}
+nav .navbar a.active{
+    background: var(--primary);
+    color: var(--pure);
+}
+
+nav .navbar a:hover{
+    background: var(--primary);
+    color: var(--pure);
+}
+
+/* navbar  */
+
+/* nav      */
+
+.magic-shadow{
+    position: relative;
+    background: var(--heaven);
+}
+.magic-shadow:after{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 69px;
+    background-image: url(../IMG/shadow.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: -22px;
+    z-index: -1;
+    background-position: center;
+}
+.magic-shadow-sm{
+    position: relative;
+    background: var(--heaven);
+}
+.magic-shadow-sm:after{
+    content: '';
+    display: block;
+    width: 90%;
+    height: 69px;
+    background-image: url(../IMG/shadow-sm.svg);
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: -22px;
+    z-index: -1;
+    background-position: center;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Main Content  */
+
+header.hero {
+    height: 550px;
+    background-color: #FADBD8;
+    /* background-image: url(../IMG/hero.png); */
+    background-size: cover;
+    background-position: 0% 0%;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+header.hero .welcome span{
+    font-family: "poppins",sans-serif;
+    font-weight: 700;
+    color: var(--secondary);
+    margin-right: 0.75rem;
+}
+header.hero h1{
+    color: var(--secondary);
+    font-size: 2.5rem;
+    margin-bottom: .25rem;
+}
+header.hero .container{
+    position: relative;
+}
+header.hero h1 span{
+    color: var(--primary);
+}
+header.hero p{
+    font-family: "poppins", sans-serif;
+    font-weight: 400;
+    width: 70%;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+header.hero .welcome{
+    margin-bottom: 0.25rem;
+}
+.btn{
+    padding: 0.75rem 0.75rem;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    line-height: 0.8;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition:all 0.3s ease;
+}
+
+.btn-primary{
+    background:var(--primary);
+    color: var(--heaven);
+}
+.btn-primary:hover{
+    background: var(--heaven);
+    color: var(--primary);
+    border: 1px solid var(--primary);
+}
+.btn-secondary{
+    background:var(--secondary);
+    color: var(--heaven);  
+}
+.btn-secondary:hover{
+    background: var(--heaven);
+    color: var(--secondary);
+    border: 1px solid var(--secondary);
+}
+header.hero button:first-child{
+    margin-right: 0.50rem;
+}
+header.hero .hero-image{
+    position: absolute;
+    width:500px;
+    top: 30px;
+    right: -30px;
+}
+/* Main Content  */
+
+
+/* -------------- food slider - height ---------- */
+
+/* -------------- food slider - height ---------- */
+
+/* section  */
+
+section{
+    padding: 3rem 0;
+}
+section.top-products{
+    background: var(--light);
+}
+section.gift-products{
+    background: var(--heaven);
+}
+.section-heading{
+    font-family: "poppins",sans-serif;
+    font-weight: 700;
+    text-align: center;
+    position: relative;
+    margin-bottom: 4rem;
+}
+.section-heading:after{
+    content: '';
+    display: block;
+    height: 30px;
+    width: 100%;
+    background-image: url(../IMG/hr.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    bottom: -40px;
+}
+section.top-products .food-slider .food-card{
+    background: var(--heaven);
+    padding: 1.5rem 0.5rem;
+    border-radius: 4px;
+}
+section.gift-products .food-slider .food-card{
+    background: var(--light);
+}
+section.top-products .food-slider .food-card img{
+    width: 80%;
+    height: 200px;
+    object-fit: contain;
+    padding-bottom: 1rem;
+}
+hr{
+    border:1px solid var(--light);
+    opacity: 0.8;
+    margin: 1rem 0;
+}
+section.top-products .food-slider .food-card h2{
+    font-family: "poppins",sans-serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-bottom: 0.25rem;
+}
+section.top-products .food-slider .food-card .stars{
+    margin-bottom: 0.50rem;
+}
+section.top-products .food-slider .food-card .stars .fa-star{
+    margin-right: 0.25rem;
+    color: var(--primary);
+}
+section.top-products .food-slider .food-card .price{
+    font-family: "poppins",sans-serif;
+    font-weight: 400;
+    color: var(--danger);
+    margin-bottom: 1rem;
+}
+section.top-products .food-slider .food-card button{
+    font-family: "poppins",sans-serif;
+    font-weight: 500;
+    color: var(--secondary);
+    background: var(--heaven);
+    border: 2px solid var(--primary);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+section.top-products .food-slider .food-card button:hover{
+    background:var(--primary);
+    color: var(--heaven);
+}
+.text-center{
+    text-align: center;
+}
+.food-slider .food-card button .product-btn{
+    background: var(--primary);
+    padding: 0.50rem;
+    height: 32px;
+    margin-right: 1.2rem;
+}
+.slick-slide{
+    margin: 0 27px;
+}
+.slick-list{
+    margin: 0 -27px;
+}
+.top-products .slider{
+    position: relative;
+}
+.top-products .slider-btn{
+    width: 30px;
+    height: 30px;
+    border: none;
+    background: var(--primary);
+    border-radius: 4px;
+    cursor: pointer;
+    outline: none;
+}
+.prev-btn{
+    position: absolute;
+    top: 46%;
+    left: -3rem;
+    z-index: 1;
+}
+.next-btn{
+    position: absolute;
+    top: 46%;
+    right: -3rem;
+    z-index: 1;
+}
+.top-products .btn-wrapper{
+    margin-top: 2rem;
+}
+
+
+/* --------------------- Our services ---------------------  */
+
+section.our-services{
+    background: var(--light);
+    position: relative;
+    z-index: 0;
+}
+section.our-services .card-wrapper{
+    margin-right: -2rem;
+    margin-top: 4rem;
+}
+
+section.our-services .service-card{
+    background-color: var(--heaven);
+    text-align: center;
+    padding: 2rem;
+    position: relative;
+    border-radius: 4px;
+    margin-right: 2rem;
+}
+section.our-services .service-card .icon{
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+section.our-services .service-card h2{
+    font-family: "poppins",sans-serif;
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+section.our-services .service-card p{
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+.text-primary{
+    color: var(--primary);
+}
+/* --------------------- Our services ---------------------  */
+
+/* ------------ Contact Us --------------  */
+
+section.contact-us{
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 1rem;
+}
+section.contact-us .contact-info-wrapper{
+    padding: 4rem 0;
+    flex: 1;
+}
+section.contact-us .map{
+    flex: 1;
+    filter: grayscale(100%);
+}
+section.contact-us .contact-info{
+    display: flex;
+    justify-content: center;
+}
+section.contact-us .contact-info > div > div{
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+section.contact-us .contact-info > div > div .co-img{
+    margin-right: 1rem;
+}
+section.contact-us .contact-info > div > div > div{
+    display: flex;
+   flex-direction: column;
+}
+section.contact-us .contact-info > div > div > div span:first-child{
+    font-family: 'poppins',sans-serif;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+/* ------------ Contact Us --------------  */
+
+/* ----------- Footer --------------  */
+
+footer .container{
+    display: flex;
+    color: var(--pure);
+}
+footer .box{
+    flex: 1;
+    margin-right: 2rem;
+    text-align: center;
+}
+
+footer .box ul{
+    list-style-type: none;
+}
+footer .box ul li a{
+    color: var(--pure);
+    text-decoration: none;
+    transition: all .3s ease;
+    cursor: pointer;
+}
+footer .box ul li a:hover{
+    color: var(--primary);
+}
+footer .box ul li:hover{
+    color: var(--primary);
+}
+footer .box h3{
+    border-bottom: 1px solid var(--primary);
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+footer .box p{
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+footer .box ul li{
+    margin-bottom: 1rem;
+}
+footer .box:nth-child(3) > div{
+    display: flex;
+    justify-content: center;
+}
+footer .box:nth-child(3){
+    text-align: center;
+}
+footer .box:nth-child(3) h3{
+    text-align: center;
+}
+footer .box .follow-margin{
+    margin-right: 1rem;
+}
+footer .box:nth-child(3) ul li{
+    margin-bottom: 1.5rem;
+}
+footer{
+    background: var(--footer);
+    padding: 4rem 0;
+}
+footer.copyright{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1rem 0;
+    background:var(--secondary);
+    color: var(--pure);
+    text-align: center;
+    font-size: 1rem;
+}
+
+/* ------------- Count ---------------- */
+
+.count{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.count p{
+    margin: .5rem;
+}
+.count #visit-count{
+    color: var(--primary);
+}
+
+/* ------------- Count ---------------- */
+footer.copyright a{
+    color: var(--primary);
+    text-decoration: none;
+}
+/* ----------- Footer --------------  */
+
+/* ------------- Mobile Nav Links ----------  */
+
+.nav-background .mobile-logo{
+    padding: 1rem;
+}
+.nav-background .mobile-nav{
+    padding: 1rem;
+}
+.nav-background .mobile-nav ul{
+    list-style-type: none;
+}
+.nav-background .mobile-nav ul li{
+    margin-bottom: 1rem;
+}
+.nav-background .mobile-nav ul li a{
+    text-decoration: none;
+    color: var(--secondary);
+    font-family: "poppins",sans-serif;
+    font-weight: 500;
+}
+.nav-background .mobile-nav ul li a:hover{
+    color: var(--primary);
+}
+.nav-background .contact, .nav-background .time{
+    padding: 1rem;
+    padding-left: 0;
+}
+.nav-background .contact .mob-mar, .nav-background .time .mob-mar{
+    margin-right: 1rem;
+}
+.nav-background .contact h5, .nav-background .time h5{
+    font-family: "poppins",sans-serif;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+    font-size: 1rem;
+}
+.nav-background .contact h6,.nav-background .time h6{
+    font-size: 0.75rem;
+}
+.nav-background .cart{
+    margin-bottom: 2rem;
+}
+.nav-background .cart a{
+    color: var(--secondary);
+    text-decoration: none;
+    font-family: "poppins",sans-serif;
+    font-weight: 700;
+}
+.nav-background .cart .space{
+    margin-right: 0.75rem;
+}
+
+/* ------------- Mobile Nav Links ----------  */
+
+/* ----------------- ALL PRODUCTS -------------- */
+.product-sort{
+    display: flex;
+    justify-content: space-between !important;
+}
+.product-sort option{
+    font-family: "poppins",sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+}
+select{
+    border: 1px solid var(--primary);
+}
+select:focus{
+    outline: none;
+}
+.page-btn{
+    margin-top: 4rem;
+}
+.page-btn span{
+    display: inline-block;
+    border: 1px solid var(--primary);
+    margin-left: 10px;
+    width: 40px;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+}
+.page-btn span:hover{
+    background: #2ECC71;
+    color: white;
+}
+.page-btn span.active-1{
+    background: var(--primary);
+    color: var(--heaven);
+}
+.product-image:hover{
+    transform: translateY(-5px);
+}
+.product-image{
+    transition: transform 0.5s;
+}
+/* ------------------------ All Products ------------------ */
+
+
+/* --------------------------- Shop ------------------------- */
+
+.view-shop{
+    text-align: end;
+}
+
+/* --------------------------- Shop ------------------------- */
+
+
+/* -------------------------- Service --------------------------- */
+
+.serve-content{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 1.5rem 0;
+    padding: 0.75rem 1rem;
+}
+.serve-content .serve-img{
+    padding: 1rem;
+}
+.serve-content .serve-img img{
+    width: 200px;
+}
+.serve-content .serve-text h2{
+    padding: 1rem 0.75rem;
+    font-family: "poppins",sans-serif;
+    font-weight: 700;
+}
+.serve-content .serve-text p{
+    padding: 0 .75rem;
+    font-size: 1rem;
+    font-family: "poppins",sans-serif;
+    /* font-weight: 600; */
+}
+
+.serve-content.serve-1{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.site-content .serve-h1{
+    text-align: center;
+    padding-top: 2rem;
+    color: var(--primary);
+}
+.terms{
+    padding: 2rem 0;
+    text-align: center;
+}
+.terms a{
+    text-decoration: none;
+    color: var(--heaven);
+    font-family: "poppins",sans-serif;
+    font-weight: 700;
+    background: var(--secondary);
+    padding: 0.75rem 1rem;
+    border-radius: 4px;
+}
+.terms a:hover{
+    background: var(--primary);
+    color: var(--heaven);
+}
+
+
+/* -------------------------- Service --------------------------- */
+
+/* ----------------- coming soon ------------------- */
+
+.coming-soon{
+    max-width: 900px;
+    color:var(--pure);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.coming-soon .soon-img{
+    width: 350px;
+    padding-top: 1rem ;
+}
+.coming-soon .soon-desc span{
+    font-size: 1.5rem;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    letter-spacing: 3px;
+}
+.coming-soon .soon-desc p{
+    font-size: 1rem;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    margin: 1.5rem 0;
+}
+.whatsapp{
+    border: 1px solid var(--primary);
+    padding: 1rem 2rem;
+    text-align: center;
+}
+.whatsapp .fa-brands{
+    color: var(--primary);
+    font-size: 2rem;
+}
+.whatsapp h3{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding-bottom: 0.5rem;
+}
+.primary{
+    color: var(--primary);
+}
+/* ----------------- coming soon ------------------- */
+.slick-track{
+    margin: 1rem 0;
+}
+
+
+/* --------------- Mobile Media Query ------------ */
+
+@media (max-width:992px){
+    .nav-trigger{
+        display: block;
+    }
+    header.topbar, nav{
+        display: none;
+    }
+    header.hero .hero-image{
+        right: -100px;
+        top: 100px;
+    }
+    header.hero{
+        margin-top: -4rem;
+    }
+    .top-products .slider-btn{
+        display: none !important;
+    }
+    footer .instagram-api .post-wrapper > div{
+        width: calc(1/2*100% - (1-1/3)*10px);
+    }
+}
+
+@media (max-width:768px){
+    .about-meal .about-meal-wrap{
+        flex-direction: column;
+    }
+    .about-meal .about-meal-wrap img{
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+    section.our-services .card-wrapper{
+        flex-direction: column;
+    }
+    section.our-services .card-wrapper .service-card{
+        margin-bottom: 6rem;
+    }
+    footer .container{
+        flex-direction: column;
+    }
+    footer .box{
+        text-align: left;
+        margin-right: 0;
+        margin-bottom: 3rem;
+    }
+    footer .box:nth-child(3) h3{
+        text-align: left;
+    }
+    footer .box:nth-child(3){
+        text-align: left;
+    }
+    footer .box:nth-child(3) > div{
+        display: block;
+    }
+    section.subscribe .container{
+        flex-direction: column;
+        padding: 0.50rem;
+    }
+    section.subscribe h1{
+        margin-top: 1rem;
+        margin-bottom: 0.25rem;
+    }
+    header.hero .hero-image{
+        right: -200px;
+        top: 100px;
+    }
+    header.hero{
+        height: 550px !important;
+    }
+}
+
+@media (max-width:576px){
+    header.hero .container{
+        padding-top: 3rem;
+        padding-left: 1rem;
+    }
+    header.hero{
+        margin-top: -1.5rem;
+    }
+    section.big-deal .timer > div{
+        margin-right: 0.50rem;
+    }
+    section.big-deal .timer{
+        margin-right: -0.50rem;
+    }
+    section.subscribe .container{
+        flex-direction: column;
+        padding: 0.50rem 1.50rem;
+    }
+    .serve-content{
+        display: flex;
+        flex-direction: column;
+    }
+    .serve-content.serve-1{
+        flex-direction: column !important;
+    }
+    .serve-content .serve-img{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .serve-content .serve-text h2{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    footer.copyright{
+        flex-direction: column;
+    }
+    header.hero .hero-image{
+        right: -350px;
+        top: 100px;
+    }
+    footer .brand-logo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* -------------- coming soon - html ------------- */
+    .coming-soon{
+        flex-direction: column;
+    }
+    .soon-desc{
+        padding: 5rem .5rem;
+    }
+    .soon-img img{
+        padding-top: .5rem;
+        width: 350px !important;
+    }
+    .soon-desc .whatsapp{
+        margin-top: 3.5rem;
+    }
+    /* -------------- coming soon - html ------------- */
+}
+@media (max-width:360px){
+    .time{
+        display: none;
+        }
+        .contact{
+            margin-top: 1.5rem;
+        }
+        .contact-us .contact-info span{
+            font-size: 0.8rem;
+            padding-right: 1rem;
+        }
+        .contact-us .contact-info .co-img{
+            margin-right: 0.5rem !important;
+        }
+        .serve-content{
+            display: flex;
+            flex-direction: column;
+        }
+        .serve-content.serve-1{
+            flex-direction: column !important;
+        }
+        .serve-content .serve-img{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .serve-content .serve-text h2{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        header.hero .hero-image{
+            right: -370px;
+            top: 100px;
+        }
+}
+/* --------------- Mobile Media Query ------------ */
